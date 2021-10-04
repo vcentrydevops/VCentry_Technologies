@@ -56,6 +56,7 @@ export default function SignUp() {
                 if (signupDetail.password === signupDetail.confirmPassword) {
                     if (!passwordRegex.test(signupDetail.password)) {
                         toast.warn("Password must contains one upperCase, one LowerCase, one numeric and one special character", { position: toast.POSITION.TOP_CENTER })
+                        signupRef.current.disabled = false
                     }
                     else {
                         API.postApi('/admin/signUp', {
