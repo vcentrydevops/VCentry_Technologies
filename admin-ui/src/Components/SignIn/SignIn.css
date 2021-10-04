@@ -1,0 +1,13 @@
+.admin-signin-main-div{
+    height: 75.7vh;
+}
+
+.admin-signin-main-div>form{
+    width: 50%;
+    margin-left: 25%;
+    box-shadow: 1px 1px 3px;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    top:10%;
+}

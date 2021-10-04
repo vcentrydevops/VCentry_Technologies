@@ -1,0 +1,197 @@
+.admin-header-div1{
+    background-color: #28a745;
+    padding: 7px 0px 7px 0px;
+}
+.admin-header-div1>div{
+    width: 90%;
+    margin-left:5%;
+    display: flex;
+}
+
+.admin-header-div1-contact{
+    flex-basis: 70%;
+    display: flex;
+}
+.admin-header-div1-contact>div{
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.admin-header-div1-contact>div>p{
+    margin: 0px;
+    margin-right: 8px;
+}
+.admin-header-div1-contact>div>p>a{
+    color: #fff;
+    text-decoration: none;
+}
+.admin-header-div1-contact>div>p:nth-child(4){
+    margin-right: 15px;
+}
+.admin-vertical-line-phone{
+    height: 15px;
+    width: 2px;
+    margin: 0px 5px 0px 5px !important;
+    background-color: #fff;
+}
+
+.admin-header-div1-contact1{
+    flex-basis: 30%;
+    display: flex;
+}
+.admin-header-contact-icon{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.admin-header-contact-icon>a:hover{
+    transform: scale(1.05);
+}
+.admin-header-contact-icon>a>i{
+    display: flex;
+    align-items: center;
+    background-color: #116b25c5;
+    border-radius: 100%;
+    margin-left: 13px;
+}
+.admin-header-contact-icon>a>i>span{
+    font-size: 15px;
+    color: #fff;
+    padding: 0px 4px 0px 4px;
+}
+.admin-header-contact-icon>a>i>span>svg{
+    margin-bottom: 3px;
+}
+
+.admin-header-div2{
+    background-color: #292929;
+    height: 70px;
+}
+.admin-header-div2>div{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.admin-header-div2-ins-details{
+    height: 70px;
+    display: flex;
+    flex-basis: 28%;
+    align-items: center;
+    text-decoration: none !important;
+}
+.admin-header-div2-ins-details>img{
+    height: 50px;
+}
+.admin-inst-name{
+    display: flex;
+    margin-left: 10px;
+    text-align: center;
+}
+.admin-inst-name>p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+.admin-inst-name>p>span:first-child{
+    color: #28a745;
+}
+.admin-inst-name>p>span:last-child{
+    color: #dc3545;
+}
+
+.admin-header-div2-sign{
+    flex-basis: 70%;
+}
+
+.admin-width-970-menu{
+    margin-right: 13px;
+}
+
+
+#admin-sign-in-up-btn{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+#admin-sign-in-up-btn>a:first-child{
+    margin-right: 23px;
+}
+
+#admin-sign-in-up-btn>a{
+    text-decoration: none;
+    color: #ffff !important;
+    align-items: center;
+    display:flex;
+    height: 100%;
+}
+#admin-sign-in-up-btn>p{
+    cursor: pointer;
+    color: #ffff !important;
+    align-items: center;
+    display:flex;
+    height: 100%;
+}
+
+@media (max-width:1040px) {
+    .admin-header-div2-ins-details{
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width:970px) {
+    .admin-header-div1>div{
+        width: 98% !important;
+        margin-left: 1% !important;
+    }
+    .admin-header-div2>div{
+        width: 98% !important;
+        margin-left: 1% !important;
+    }
+    .admin-header-div1-contact{
+        display: grid;
+        width: 50%;
+    }
+    .admin-header-contact-icon>a{
+        display: flex;
+        align-items: center;
+    }
+    .admin-width-970-menu{
+        display: flex;
+    }
+    .admin-header-div2{
+        height: auto;
+    }
+    .admin-header-div2-ins-details{
+        flex-basis: 50%;
+    }
+    .admin-header-div1>div{
+        width: 100%;
+        margin: 0%;
+    }
+    .admin-header-div2>div{
+        width: 100%;
+        margin: 0%;
+    }
+}
+
+@media (max-width:563px){
+    .admin-header-div1>div{
+        display: grid;
+    }
+    .admin-header-div1-contact{
+        width: 100%;
+        padding-bottom: 13px;
+    }
+    .admin-header-contact-icon{
+        justify-content: start;
+    }
+    .admin-header-contact-icon>a>i{
+        margin-left: 0px;
+        margin-right: 13px;
+    }
+}

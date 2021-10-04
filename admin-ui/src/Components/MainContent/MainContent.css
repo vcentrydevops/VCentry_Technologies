@@ -1,0 +1,222 @@
+.body{
+    background-color: rgb(219, 219, 219);
+}
+.admin-main-content-div{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.admin-main-content-div>div{
+    width: 90%;
+    margin-left: 5%;
+}
+.admin-main-content-div>div>div,
+.admin-course-sat>div{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    font-size: 18px;
+    justify-content: space-between;
+}
+.admin-main-content-div>div>div>label,
+.admin-course-sat>div>label{
+    flex-basis: 27%;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-main-content-div>div>div>input,
+.admin-main-content-div>div>div>textarea,
+.admin-course-sat>div>input,
+.admin-course-sat>div>textarea{
+    flex-basis: 70%;
+    border-radius: 5px;
+    background-color: #ffff;
+    border: none;
+    box-shadow: 0px 0px 1px 1px;
+}
+.admin-main-content-div>div>div>input:focus,
+.admin-main-content-div>div>div>textarea:focus{
+    outline: none;
+}
+
+#admin-batch-details,
+.admin-course-sat{
+    display: block !important;
+    margin-bottom: 20px;
+}
+
+#admin-course-content-div{
+    display: block;
+}
+
+#admin-batch-details>p:first-child,
+#admin-syllabus>p,
+#admin-trainer-Profile>p,
+#admin-about-course>p,
+#admin-syllabus>div>p,
+#admin-course-faq>p{
+    width: 27%;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+#admin-trainer-Profile>div>div:first-child>p,
+#admin-syllabus-navlink>p{
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px !important;
+}
+#admin-trainer-Profile>div>div:first-child{
+    margin-bottom: 20px;
+}
+#admin-syllabus-navlink,
+#admin-trainer-Profile{
+    flex-wrap:wrap;
+}
+#admin-syllabus-navlink>div{
+    flex-basis: 100%;
+}
+#admin-trainer-Profile>div:last-child{
+    display: block;
+    width: 100%;
+}
+
+
+#admin-batch-details>div{
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 23.75% 23.75% 23.75% 23.75% 5%;
+}
+
+#admin-batch-details>div:nth-child(4){
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    border: 1px solid;
+}
+#admin-batch-details>div:last-child>div{
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23% 8%;
+    width: 100%;
+}
+
+#admin-batch-details>div:last-child>div>i{
+    cursor: pointer;
+}
+
+#admin-batch-details>div:last-child>div>input:disabled,
+#admin-batch-details>div:last-child>div>select:disabled{
+    background-color: white !important;
+    color: black !important;
+    opacity: 1 !important;
+    border: 1px solid rgba(206, 206, 206, 0.767);
+}
+
+input:disabled,
+select:disabled{
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+.admin-course-sat>div>input:focus,
+.admin-course-sat>div>textarea:focus,
+.admin-course-sat>div>select:focus,
+.admin-course-sat>div>div>input:focus{
+    outline: none;
+}
+
+#admin-syllabus-navlink>div{
+    margin-top: 30px;
+}
+
+.admin-syllabus-ck-editor,
+.admin-ck-editor-height{
+    display: block !important;
+    width: 100% !important;
+}
+.admin-syllabus-ck-editor>div,
+.admin-ck-editor-height>div{
+    display: block !important;
+}
+.admin-syllabus-ck-editor>div>.ck-editor__main,
+.admin-ck-editor-height>div>.ck-editor__main{
+    height: 150px !important;
+}
+.admin-syllabus-ck-editor>div>.ck-editor__main>div,
+.admin-ck-editor-height>div>.ck-editor__main>div{
+    height: 100%;
+    font-size: 16px;
+}
+
+p{
+    margin: 0px !important;
+}
+.admin-disabled-div>input:disabled{
+    background-color: #ffff !important;
+    color: #000000 !important;
+}
+
+.admin-crud-div{
+    border: 1px solid;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+#admin-about-course>div{
+    display: block;
+}
+
+#admin-course-faq>div>input,
+#admin-course-faq-show>div>input{
+    flex-basis: 100%;
+    height: 34.5px;
+}
+#admin-course-faq>div:nth-child(3),
+#admin-course-faq-show>div:nth-child(2){
+    margin-top: 3px !important;
+}
+#admin-course-faq>div:last-child,
+#admin-course-faq-show>div:last-child{
+    margin-top: 3px;
+    justify-content: flex-end;
+}
+
+.admin-faq-show-div{
+    box-shadow: 0px 0px 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#admin-course-faq-show>div:nth-child(1){
+    margin-top: 0px !important;
+}
+
+#admin-course-faq-show{
+    max-width: 95% !important;
+    box-shadow: 1px 1px 3px 2px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.admin-show-faq-div>i{
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.admin-submit-btn{
+    width: 20%;
+    margin-left: 40%;
+    font-weight: bold;
+    color: #ffff;
+}
