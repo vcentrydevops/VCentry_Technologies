@@ -184,7 +184,7 @@ export default function EditCourse() {
     })
 
     const showFaq = courseDetail.courseFaq.map((data, index) => {
-        return <div key={index + data.heading} id="course-faq-show" className="admin-course-sat">
+        return <div key={index + data.heading} id="admin-course-faq-show" className="admin-course-sat">
             <div>
                 <input type="text" name="heading" placeholder="Enter question" defaultValue={data.heading} onChange={(event) => setCourseFaqHead(event)} disabled={index === editFaq ? false : true}></input>
             </div>
@@ -222,7 +222,7 @@ export default function EditCourse() {
                             <label>Course Name<span>:</span></label>
                             <input type="text" name="courseHeading" onChange={(event) => setData(event)} defaultValue={courseDetail.courseHeading}></input>
                         </div>
-                        <div id="course-content-div">
+                        <div id="admin-course-content-div">
                             <label>Course Content</label>
                             <div className="admin-syllabus-ck-editor">
                                 <CKEditor
@@ -257,7 +257,7 @@ export default function EditCourse() {
                             <label>Assignments<span>:</span></label>
                             <input type="text" name="assignments" defaultValue={courseDetail.assignments} onChange={(event) => setData(event)}></input>
                         </div>
-                        <div id="batch-details">
+                        <div id="admin-batch-details">
                             <p>Batches</p>
                             <div>
                                 <p>Date</p>
@@ -285,13 +285,13 @@ export default function EditCourse() {
                                 {batchDetail}
                             </div>}
                         </div>
-                        <div id="syllabus" className="admin-course-sat">
+                        <div id="admin-syllabus" className="admin-course-sat">
                             <p>Syllabus</p>
                             <div>
                                 <label>Enter Syllabus Heading<span>:</span></label>
                                 <input type="text" onChange={(event) => setSyllabus(event)} defaultValue={courseDetail.syllabus.heading} name="heading"></input>
                             </div>
-                            <div id="syllabus-navlink">
+                            <div id="admin-syllabus-navlink">
                                 <p>Syllabus Content<span>:</span></p>
                                 <div className="admin-syllabus-ck-editor">
                                     <CKEditor
@@ -302,7 +302,7 @@ export default function EditCourse() {
                                 </div>
                             </div>
                         </div>
-                        <div id="about-course" className="admin-course-sat">
+                        <div id="admin-about-course" className="admin-course-sat">
                             <p>About Course</p>
                             <div>
                                 <label>Enter About Content</label>
@@ -315,7 +315,7 @@ export default function EditCourse() {
                                 </div>
                             </div>
                         </div>
-                        <div id="trainer-Profile" className="admin-course-sat">
+                        <div id="admin-trainer-Profile" className="admin-course-sat">
                             <p>Trainer Profile</p>
                             <div>
                                 <label>Enter Heading<span>:</span></label>
@@ -335,7 +335,7 @@ export default function EditCourse() {
                             </div>
                         </div>
                     </div>
-                    <div id="course-faq" className="admin-course-sat">
+                    <div id="admin-course-faq" className="admin-course-sat">
                         <p>Course FAQ</p>
                         <div>
                             <input type="text" ref={faqHeadRef} name="heading" placeholder="Enter question" onChange={(event) => setCourseFaqHead(event)}></input>
