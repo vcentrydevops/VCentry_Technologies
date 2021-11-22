@@ -133,7 +133,6 @@ export default function EducationDetails(props) {
                                     defaultValue={eduData.sslcDetails.percentage ? eduData.sslcDetails.percentage : ""}
                                     className="user-input" type='number' name="percentage"
                                     onChange={getsslcDetails} placeholder="Percentage"
-                                    value={eduDetails.sslcDetails.percentage}
                                     required></input>
                             </label>
                             <label onClick={() => setcalendar({ sslc: true })}>
@@ -162,7 +161,6 @@ export default function EducationDetails(props) {
                         <div className="education-div">
                             <label>
                                 <input className="user-input"
-                                    value={eduDetails.sscDetails.percentage}
                                     defaultValue={eduData.sscDetails.percentage ? eduData.sscDetails.percentage : ""}
                                     type='number' name="percentage" placeholder="Percentage" onChange={getsscDetails}
                                     required={eduDetails.sscDetails.passedOut ? true : false}
@@ -194,7 +192,7 @@ export default function EducationDetails(props) {
                         <div className="education-div">
                             <label>
                                 <input className="user-input"
-                                    value={eduDetails.ugDetails.percentage}
+                                    // value={eduDetails.ugDetails.percentage}
                                     defaultValue={eduData.ugDetails.percentage ? eduData.ugDetails.percentage : ""}
                                     type='number' name="percentage" placeholder="Percentage" onChange={getugDetails} required></input>
                             </label>
@@ -224,7 +222,7 @@ export default function EducationDetails(props) {
                         <div className="education-div">
                             <label>
                                 <input className="user-input"
-                                    value={eduDetails.pgDetails.percentage}
+                                    // value={eduDetails.pgDetails.percentage}
                                     defaultValue={eduData.pgDetails.percentage ? eduData.pgDetails.percentage : ""}
                                     type='number' name="percentage" placeholder="Percentage"
                                     onChange={getpgDetails}

@@ -179,7 +179,16 @@
     }
 }
 
+@media (max-width:769px) {
+
+}
+
 @media (max-width:563px){
+    #sign-in-form{
+        width: 70% !important;
+        margin-left: 15% !important;
+        margin-bottom: 50px;
+    }
     .admin-header-div1>div{
         display: grid;
     }
@@ -193,5 +202,23 @@
     .admin-header-contact-icon>a>i{
         margin-left: 0px;
         margin-right: 13px;
+    }
+}
+
+@media (max-width:321px){
+    .admin-main-header{
+        display: grid;
+        width: 100%;
+    }
+    #sign-in-form{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+    .admin-header-div1-contact>div>p{
+        margin-right: 0px;
+    }
+    .admin-header-div1-contact>div{
+        margin-right: 0px;
+        font-size: 12px;
     }
 }

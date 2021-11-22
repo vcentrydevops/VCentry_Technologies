@@ -1,0 +1,54 @@
+.otp-head-p{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+
+.email-otp>input{
+    width: 40px !important;
+    height: 35px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.btn-cont-div{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    margin-top: 25px;
+}
+
+.otp-cont-div>div{
+    justify-content: center;
+}
+
+.otp-input{
+    padding:4px 30px;
+    background-color: #28a745;
+    border-radius: 4px;
+    color: #ffff;
+    font-weight: 600;
+    border: none;
+}
+
+.otp-input:disabled{
+    opacity: 0.6;
+}
+.resend-input{
+    border-bottom: 1px solid;
+    cursor: pointer;
+    margin-bottom: 0px;
+    font-size: 15px;
+    margin-top: 5px;
+    color: rgb(92, 47, 255);
+}
+
+@media (max-width:321px) {
+    .email-otp>input{
+        width: 35px !important;
+        height: 30px;
+        margin-right: 10px;
+        font-size: 19px;
+    }
+}

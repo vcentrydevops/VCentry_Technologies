@@ -1,4 +1,4 @@
-import React, { useState,createRef } from 'react'
+import React, { useState,createRef, Fragment } from 'react'
 import Header from '../Components/Header/Header'
 import { Form, Button } from 'react-bootstrap'
 import '../ResumeStyleSheets/SignIn.css'
@@ -46,7 +46,7 @@ export default function SignIn() {
     const links = [{name:"Sign Up",path:"/resume/sign-up"}]
 
     return (
-        <div>
+        <Fragment>
             <Header header="VCentry Technologies" links={links}/>
             <ToastContainer autoClose={3000}/>
             <div id="sign-in-form">
@@ -71,6 +71,6 @@ export default function SignIn() {
                     </Button>
                 </form>
             </div>
-        </div>
+        </Fragment>
     )
 }

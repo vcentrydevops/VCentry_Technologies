@@ -68,9 +68,7 @@ export default function CarrerDetails(props) {
             setcarrierDetails({ ...carrierDetails, [e.target.name]: e.target.value })
         } else if (e.target.name === "noticePeriod" && 0 <= e.target.value && 6 >= e.target.value) {
             setcarrierDetails({ ...carrierDetails, [e.target.name]: e.target.value })
-        }
-        else if (e.target.name !== "experience" && e.target.name !== "noticePeriod") {
-            console.log(e.target.name);
+        }else if (e.target.name !== "experience" && e.target.name !== "noticePeriod") {
             setcarrierDetails({ ...carrierDetails, [e.target.name]: e.target.value })
         } else {
             setcarrierDetails({ ...carrierDetails })
@@ -119,8 +117,8 @@ export default function CarrerDetails(props) {
                         <div className="personal-div-input">
                             <label htmlFor="fresherYes" className="working-status-label">
                                 <input id="fresherYes"
-                                    checked={carrierDetails.fresher}
-                                    defaultChecked={carrierData.fresher} className="fresher-checkbox"
+                                    checked={carrierDetails.fresher?carrierDetails.fresher:false}
+                                    className="fresher-checkbox"
                                     type='checkbox' name="fresher" onChange={getCarrierDetails}></input>
                                 <div className="custom-switch"></div>
                             </label>
