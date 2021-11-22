@@ -1,5 +1,5 @@
 const express = require('express')
-const RequiredLogin = require('../MiddleWare/ResumeLogin')
+const RequiredLogin = require('../Middleware/ResumeLogin')
 const AdminLogin = require('../Middleware/RequiredLogin')
 const router = express.Router()
 const UserInfo = require('../Models/UserInfo')
