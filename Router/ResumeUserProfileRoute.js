@@ -62,12 +62,12 @@ router.post('/user/send-verify', (request, response) => {
             Otp.deleteMany({ email: res.email }).then(res => {
                 transporter.sendMail(mailOptions, function (error, info) {
                     if (error) {
-                        response.status(422).json({ errorMessage: 'email not sended' })
+                        response.status(422).json({ errorMessage: 'email not sended',error })
                     } else {
                         Otp.create({ email: email, otp: otp }).then(res => {
-                            response.status(200).json({ successMessage: "otp generated" })
+                            response.status(200).json({ successMessage: "otp generated",info })
                         }).catch(err => {
-                            response.status(422).json({ errorMessage: "Otp not generated" })
+                            response.status(422).json({ errorMessage: "Otp not generated",err })
                         })
                     }
                 });
@@ -77,12 +77,12 @@ router.post('/user/send-verify', (request, response) => {
         } else {
             transporter.sendMail(mailOptions, function (error, info) {
                 if (error) {
-                    response.status(422).json({ errorMessage: 'email not sended' })
+                    response.status(422).json({ errorMessage: 'email not sended',error })
                 } else {
                     Otp.create({ email: email, otp: otp }).then(res => {
-                        response.status(200).json({ successMessage: "otp generated" })
+                        response.status(200).json({ successMessage: "otp generated",info })
                     }).catch(err => {
-                        response.status(422).json({ errorMessage: "Otp not generated" })
+                        response.status(422).json({ errorMessage: "Otp not generated",err })
                     })
                 }
             });
