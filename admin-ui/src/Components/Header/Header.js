@@ -4,11 +4,11 @@ import { NavLink, useHistory } from 'react-router-dom'
 import { FaFacebookF, FaPinterest, FaTwitter, FaYoutube, FaLinkedinIn, FaInstagram, FaSearch } from 'react-icons/fa'
 
 function Header(props) {
-    const { id } = props
+    const { home, allCourse, addCourse, signIn, signOutBtn, signUp, links } = props
     const history = useHistory()
     const signOut = () => {
         sessionStorage.clear()
-        history.push('/admin')
+        window.location.href = "/admin"
     }
 
     return (
@@ -51,19 +51,20 @@ function Header(props) {
                                 entry Technologies</p>
                         </div>
                     </NavLink>
-                    {id === "sign-out" && <div className="admin-width-970-menu ml-auto" id="admin-sign-in-up-btn">
-                        <NavLink to="/admin/all-courses">All Courses</NavLink>
-                        <p onClick={signOut}>SignOut</p>
-                    </div>}
-                    {id === "sign-up" && <div className="admin-width-970-menu ml-auto" id="admin-sign-in-up-btn">
-                        <NavLink to="/admin/sign-up">Sign Up</NavLink>
-                    </div>}
-                    {id === "sign-in" && <div className="admin-width-970-menu ml-auto" id="admin-sign-in-up-btn">
-                        <NavLink to="/admin/sign-in">Sign In</NavLink>
-                    </div>}
+                    <div className="admin-width-970-menu ml-auto" id="admin-sign-in-up-btn">
+                        {home && <NavLink to="/admin">Home</NavLink>}
+                        {allCourse && <NavLink to={allCourse}>All Courses</NavLink>}
+                        {addCourse && <NavLink to="/admin/courses">Add Courses</NavLink>}
+                        {signUp && <NavLink to="/admin/sign-up">Sign Up</NavLink>}
+                        {signIn && <NavLink to="/admin/sign-in">Sign In</NavLink>}
+                        {links && links.map((data,index) => {
+                            return <NavLink key={index+data.name} to={data.path}>{data.name}</NavLink>
+                        })}
+                        {signOutBtn && <p onClick={signOut}>SignOut</p>}
+                    </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

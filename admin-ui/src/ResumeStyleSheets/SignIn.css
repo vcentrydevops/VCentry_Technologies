@@ -1,0 +1,16 @@
+#sign-in-form{
+    width: 50%;
+    margin-left: 25%;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15vh;
+    box-shadow: 1px 1px 3px;
+}
+
+.alert{
+    width: 60%;
+    margin-left: 20%;
+    position: absolute;
+    top: 12%;
+}

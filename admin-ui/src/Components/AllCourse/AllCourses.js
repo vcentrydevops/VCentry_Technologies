@@ -60,10 +60,12 @@ export default function AllCourses() {
         }
     })
 
+    const headerLink = [{name:"Home",path:"/admin"},{name:"Add Courses",path:"/admin/courses"}]
+
 
     return (
         <Fragment>
-            <Header id="sign-out"></Header>
+            <Header links={headerLink}></Header>
             {loadingImg ?
                 <div className="admin-all-course-table-div">
                     <ToastContainer/>

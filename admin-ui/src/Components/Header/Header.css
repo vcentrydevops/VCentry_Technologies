@@ -118,7 +118,7 @@
     justify-content: flex-end;
     font-weight: bold;
 }
-#admin-sign-in-up-btn>a:first-child{
+#admin-sign-in-up-btn>a{
     margin-right: 23px;
 }
 

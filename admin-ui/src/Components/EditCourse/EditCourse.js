@@ -31,7 +31,7 @@ export default function EditCourse() {
     const [batchEdit, setbatchEdit] = useState(-1)
 
     const [batches, setbatches] = useState({ date: "", day: "default", time: "", batch: "default" })
-    const [editbatches, setEditbatches] = useState()
+    const [editbatches, setEditbatches] = useState({ date: "", day: "default", time: "", batch: "default" })
 
 
     const batchDate = createRef()
@@ -70,7 +70,7 @@ export default function EditCourse() {
             batchSession.current.value = "default"
             setbatches({ date: "", day: "default", time: "", batch: "default" })
         } else {
-            toast("enter all batches fields")
+            toast.warn("enter all batches fields")
         }
     }
     const setCourseContent = (event, editor) => {
@@ -158,7 +158,7 @@ export default function EditCourse() {
             headers: { authorization: `Bearer ${sessionStorage.getItem('vcentry_admin')}` }
         }).then((res) => {
             toast.success(res.data.successMessage, { position: toast.POSITION.TOP_RIGHT })
-            history.push('/all-courses')
+            history.push('/admin/all-courses')
         }).catch(err => {
             toast.warn(err.response.data.errorMessage, { position: toast.POSITION.TOP_RIGHT })
         })
@@ -170,14 +170,14 @@ export default function EditCourse() {
             <input defaultValue={data.date} type="date" disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}></input>
             <select name="day" defaultValue={data.day} disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}>
                 <option value="default" disabled>Select Day</option>
-                <option value="Mon-Fri" >Mon-Fri</option>
+                <option value="Mon-Fri" disabled={editbatches.batch === "FastTrack" ? true : false}>Mon-Fri</option>
                 <option value="Sat-Sun">Sat-Sun</option>
             </select>
             <input type="time" name="time" defaultValue={data.time} disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}></input>
             <select name="batch" defaultValue={data.batch} disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}>
                 <option value="default" disabled>Select Batch</option>
                 <option value="Normal">Normal</option>
-                <option value="Fast Track">Fast Track</option>
+                <option value="FastTrack" disabled={editbatches.day === "Mon-Fri" ? true : false}>Fast Track</option>
             </select>
             <div className="admin-crud-div"><i onClick={() => editFeeTable(index)}><FaEdit></FaEdit></i><i onClick={() => saveFeeTable(index)} style={batchEdit === index ? { display: "unset" } : { display: "none" }}><FaSave></FaSave></i><i onClick={() => deleteFeetable(index)}><FaTrash></FaTrash></i></div>
         </div>
@@ -206,13 +206,14 @@ export default function EditCourse() {
         </div>
     })
 
+    const headerLink = [{name:"All Courses",path:"/admin/all-courses"}]
 
     return (
         <Fragment>
-            <Header id="sign-out"></Header>
+            <Header links={headerLink}></Header>
+            <ToastContainer />
             {loadingImg ?
                 <form onSubmit={submit} className="admin-main-content-div">
-                    <ToastContainer />
                     <div>
                         <div>
                             <label>Course Path<span>:</span></label>
@@ -270,14 +271,14 @@ export default function EditCourse() {
                                 <input type="date" name="date" ref={batchDate} onChange={(event) => setBatchList(event)}></input>
                                 <select name="day" defaultValue="default" ref={batchDay} onChange={(event) => setBatchList(event)}>
                                     <option value="default" disabled>Select Day</option>
-                                    <option value="Mon-Fri" onChange={(event) => setBatchList(event)}>Mon-Fri</option>
+                                    <option value="Mon-Fri" disabled={batches.batch === "FastTrack" ? true : false} onChange={(event) => setBatchList(event)}>Mon-Fri</option>
                                     <option value="Sat-Sun" onChange={(event) => setBatchList(event)}>Sat-Sun</option>
                                 </select>
                                 <input type="time" name="time" ref={batchTime} onChange={(event) => setBatchList(event)}></input>
                                 <select name="batch" defaultValue="default" ref={batchSession} onChange={(event) => setBatchList(event)}>
                                     <option value="default" disabled>Select Batch</option>
                                     <option value="Normal">Normal</option>
-                                    <option value="Fast Track">Fast Track</option>
+                                    <option value="FastTrack" disabled={batches.day === "Mon-Fri" ? true : false}>Fast Track</option>
                                 </select>
                                 <input onClick={addBatches} type="button" value="ADD"></input>
                             </div>

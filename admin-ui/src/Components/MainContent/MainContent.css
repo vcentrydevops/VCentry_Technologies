@@ -150,9 +150,6 @@ select:disabled{
     font-size: 16px;
 }
 
-p{
-    margin: 0px !important;
-}
 .admin-disabled-div>input:disabled{
     background-color: #ffff !important;
     color: #000000 !important;

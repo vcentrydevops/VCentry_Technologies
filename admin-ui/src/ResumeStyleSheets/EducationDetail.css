@@ -1,0 +1,69 @@
+.education-div{
+    flex-basis: 70% !important;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.education-div>label{
+    flex-basis: 45%;
+}
+.year-picker{
+    border: none !important;
+}
+
+.calender-div{
+    width: 100%;
+    padding: 3px;
+    border: 1px solid var(--input-box-shade);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.x-design{
+    font-weight: 700;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.calender-div>.default-calen{
+    margin-bottom: 0px;
+    font-size: var(--input-size);
+    color: rgb(126, 126, 126);
+    font-weight: 400;
+    margin-left: 3px;
+}
+.value-calen{
+    margin-left: 3px;
+}
+.calender-div>p{
+    margin-bottom: 0px;
+}
+
+.education-div>label>div>div:first-child{
+    display: none;
+}
+label{
+    margin-bottom: 0px;
+}
+
+.education-div>label>div>div>input{
+    font-size: 17px;
+}
+.picker-panel{
+    top: 0px !important;
+}
+
+@media (max-width:376px) {
+    .education-div>label{
+        flex-basis: 100%;
+    }
+    .picker-panel{
+        top: 0px !important;
+        left: 0px !important;
+    }
+}
+
+@media (max-width:426px) {
+
+}

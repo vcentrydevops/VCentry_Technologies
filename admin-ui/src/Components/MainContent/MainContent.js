@@ -28,7 +28,7 @@ function MainContent(props) {
     const [batchEdit, setbatchEdit] = useState(-1)
 
     const [batches, setbatches] = useState({ date: "", day: "default", time: "", batch: "default" })
-    const [editbatches, setEditbatches] = useState()
+    const [editbatches, setEditbatches] = useState({ date: "", day: "default", time: "", batch: "default" })
     const batchDate = createRef()
     const batchDay = createRef()
     const batchTime = createRef()
@@ -153,14 +153,14 @@ function MainContent(props) {
             <input defaultValue={data.date} type="date" disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}></input>
             <select name="day" defaultValue={data.day} disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}>
                 <option value="default" disabled>Select Day</option>
-                <option value="Mon-Fri" >Mon-Fri</option>
+                <option value="Mon-Fri" disabled={editbatches.batch === "FastTrack" ? true : false}>Mon-Fri</option>
                 <option value="Sat-Sun">Sat-Sun</option>
             </select>
             <input type="time" name="time" defaultValue={data.time} disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}></input>
             <select name="batch" defaultValue={data.batch} disabled={batchEdit === index ? false : true} onChange={(event) => changeEditFeeTable(event)}>
                 <option value="default" disabled>Select Batch</option>
                 <option value="Normal">Normal</option>
-                <option value="Fast Track">Fast Track</option>
+                <option value="Fast Track" disabled={editbatches.day === "Mon-Fri" ? true : false}>Fast Track</option>
             </select>
             <div className="admin-crud-div"><i onClick={() => editFeeTable(index)}><FaEdit></FaEdit></i><i onClick={() => saveFeeTable(index)} style={batchEdit === index ? { display: "unset" } : { display: "none" }}><FaSave></FaSave></i><i onClick={() => deleteFeetable(index)}><FaTrash></FaTrash></i></div>
         </div>
@@ -188,10 +188,10 @@ function MainContent(props) {
             </div>
         </div>
     })
-
+    const headerLink = [{name:"Home",path:"/admin"},{name:"All Courses",path:"/admin/all-courses"}]
     return (
         <Fragment>
-            <Header id="sign-out"></Header>
+            <Header links={headerLink}></Header> 
             <form onSubmit={submit} className="admin-main-content-div">
                 <ToastContainer />
                 <div>

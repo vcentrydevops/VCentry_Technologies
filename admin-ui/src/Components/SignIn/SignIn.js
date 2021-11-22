@@ -27,31 +27,33 @@ function SignIn(props) {
         })
     }
 
+    const headerLink = [{ name: "Sign Up", path: "/admin/sign-up" }]
+
     return (
         <Fragment>
-        <Header id="sign-up"></Header>
-        <div className="admin-signin-main-div">
-            <ToastContainer />
-            <form onSubmit={signIn}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name="email" onChange={setLoginDetail} placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name="password" onChange={setLoginDetail} placeholder="Password" />
-                </Form.Group>
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Header links={headerLink}></Header>
+            <div className="admin-signin-main-div">
+                <ToastContainer />
+                <form onSubmit={signIn}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" name="email" onChange={setLoginDetail} placeholder="Enter email" />
+                        <Form.Text className="text-muted">
+                            We'll never share your email with anyone else.
+                        </Form.Text>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" name="password" onChange={setLoginDetail} placeholder="Password" />
+                    </Form.Group>
+                    {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group> */}
-                <Button variant="primary" ref={signBtnRef} type="submit">
-                    SignIn
-                </Button>
-            </form>
-        </div>
+                    <Button variant="primary" ref={signBtnRef} type="submit">
+                        SignIn
+                    </Button>
+                </form>
+            </div>
         </Fragment>
     )
 }

@@ -17,6 +17,7 @@ export default function SignUp() {
             mobileNo: ""
         }
     )
+    
     const userRef = createRef()
     const emailRef = createRef()
     const passwordRef = createRef()
@@ -85,10 +86,11 @@ export default function SignUp() {
             signupRef.current.disabled = false
         }
     }
+    const headerLink = [{name:"Sign In",path:"/admin/sign-in"}]
 
     return (
         <Fragment>
-            <Header id="sign-in"></Header>
+            <Header links={headerLink}></Header>
             <div>
                 <ToastContainer />
                 <div id="admin-signup-form">

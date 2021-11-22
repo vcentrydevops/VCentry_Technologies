@@ -11,6 +11,8 @@ import ProtectedRoute from './Components/ProtectedRoute'
 import AllCourses from './Components/AllCourse/AllCourses';
 import EditCourse from './Components/EditCourse/EditCourse';
 import MainHomePage from './VcentComponents/MainHomePage';
+import ResumeFirstPage from './ResumeComponents/ResumeFirstPage'
+import AdminHomePage from './Components/AdminHomePage';
 
 function App() {
   const [id, setid] = useState("sign-in")
@@ -26,11 +28,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
+          <Route path="/resume"><ResumeFirstPage></ResumeFirstPage></Route>
           <Route path="/admin/sign-in"><SignIn></SignIn></Route>
           <Route path="/admin/sign-up"><SignUp></SignUp></Route>
-          <Route path="/admin/course/:id"><EditCourse></EditCourse></Route>
-          <ProtectedRoute path="/admin/all-courses" component={AllCourses}></ProtectedRoute>
-          <ProtectedRoute path="/admin" component={MainContent}></ProtectedRoute>
+          <ProtectedRoute path="/admin" component={AdminHomePage}></ProtectedRoute>
           <Route path="/"><MainHomePage></MainHomePage></Route>
         </Switch>
         {/* <Footer></Footer> */}

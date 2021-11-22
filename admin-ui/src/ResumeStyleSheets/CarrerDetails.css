@@ -1,0 +1,118 @@
+/* .carrier-form{ */
+    /* height: 67vh;
+    overflow: auto; */
+/* } */
+
+.working-status-label{
+    margin-bottom:0px;
+    font-size: var(--input-size);
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+.working-status-label>span{
+    margin-right: 10px;
+}
+.working-status-label>input{
+    position: relative;
+    top:2px;
+    display: none;
+}
+.technology-div{
+    flex-wrap: wrap;
+}
+
+.technology-array{
+    flex-basis: 70%;
+    margin-left: 30%;
+    padding: 6px 0px 3px 3px;
+    border:1px solid var(--input-box-shade);
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.techn-list-map{
+    flex-basis: 21%;
+    border: 1px solid;
+    padding: 3px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgba(184, 184, 184, 0.383);
+    display: flex;
+    justify-content: space-between;
+}
+
+.techn-list-map>p{
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+.techn-list-map>p:last-child{
+    margin-left: 8px;
+    margin-right: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.custom-radio{
+    width: 1em;
+    height: 1em;
+    padding: 2px;
+    box-sizing: border-box;
+    border: 2px solid var(--rout-link-color);
+    border-radius: 100px;
+    margin-top: 3px;
+}
+.custom-radio::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100px;
+}
+
+.custom-switch{
+    width: 2em;
+    height: 0.75em;
+    padding: 1px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background-color: rgb(175, 175, 175);
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+.custom-switch::after{
+    content: '';
+    display: block;
+    width: 1em;
+    border-radius: 100px;
+    height:1em;
+    background-color: #ffff;
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+    border: 3px solid var(--rout-link-color);
+}
+.fresher-checkbox:checked~.custom-switch{
+    background-color: #52bfe0;
+}
+.fresher-checkbox:checked~.custom-switch::after{
+    background-color:#52bfe0;
+    left: 16px;
+}
+
+.working-status-label>input:checked~.custom-radio::after{
+    background-color: var(--rout-link-color);
+}
+
+@media (max-width:426px) {
+    .technology-array{
+        width: 100%;
+        margin-left:0%;
+        margin-top: 10px;
+    }
+}
