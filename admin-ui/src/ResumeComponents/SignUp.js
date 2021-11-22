@@ -65,6 +65,7 @@ export default function SignUp() {
                             setverify(true)
                             console.log(res);
                         }).catch(err => {
+                            console.log(err.response);
                             toast.error("Something went wrong please retry")
                             signupRef.current.disabled = false
                         })
