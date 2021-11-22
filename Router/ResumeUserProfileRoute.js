@@ -52,7 +52,7 @@ router.post('/user/send-verify', (request, response) => {
 
     var mailOptions = {
         from: 'vcentrytechnologiesresume@gmail.com',
-        to: email,  
+        to: email,
         subject: 'VCentry resume verification',
         text: `Your OTP is ${otp}. This OTP valid for 2 minutes`
     };
@@ -60,33 +60,37 @@ router.post('/user/send-verify', (request, response) => {
     Otp.findOne({ email: email }).then(res => {
         if (res) {
             Otp.deleteMany({ email: res.email }).then(res => {
-                Otp.create({ email: email, otp: otp }).then(res => {
-                    response.status(200).json({ successMessage: "otp generated" })
-                }).catch(err => {
-                    response.status(422).json({ errorMessage: "Otp not generated" })
-                })
+                transporter.sendMail(mailOptions, function (error, info) {
+                    if (error) {
+                        response.status(422).json({ errorMessage: 'email not sended' })
+                    } else {
+                        Otp.create({ email: email, otp: otp }).then(res => {
+                            response.status(200).json({ successMessage: "otp generated" })
+                        }).catch(err => {
+                            response.status(422).json({ errorMessage: "Otp not generated" })
+                        })
+                    }
+                });
             }).catch(err => {
                 console.log(err);
             })
         } else {
-            Otp.create({ email: email, otp: otp }).then(res => {
-                response.status(200).json({ successMessage: "otp generated" })
-            }).catch(err => {
-                response.status(422).json({ errorMessage: "Otp not generated" })
-            })
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    response.status(422).json({ errorMessage: 'email not sended' })
+                } else {
+                    Otp.create({ email: email, otp: otp }).then(res => {
+                        response.status(200).json({ successMessage: "otp generated" })
+                    }).catch(err => {
+                        response.status(422).json({ errorMessage: "Otp not generated" })
+                    })
+                }
+            });
+
         }
     }).catch(err => {
         console.log(err.response);
     })
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-            response.send('email not sended')
-        } else {
-            console.log('Email sent: ' + info.response);
-            response.send('email sended')
-        }
-    });
 })
 
 router.post('/user/verify', (request, response) => {
@@ -105,14 +109,13 @@ router.get('/user/:id', (request, response) => {
         }
     }).catch(err => {
         response.status(422).json({ errorMessage: "something went wrong" })
-        console.log(err);
     })
 })
 
 router.post('/user/sign-up', (request, response) => {
     const { userName, email, password, otp } = request.body
     if (otp) {
-        Otp.findOne({ email: email }).then(res=> {
+        Otp.findOne({ email: email }).then(res => {
             if (res) {
                 if (res.otp == otp) {
                     if (!userName || !email || !password) {
@@ -144,7 +147,7 @@ router.post('/user/sign-up', (request, response) => {
             } else {
                 response.status(422).json({ errorMessage: "Please enter valid OTP" })
             }
-        }).catch(err=>{
+        }).catch(err => {
             console.log(err);
             response.status(422).json({ errorMessage: "oops something went wrong" })
         })

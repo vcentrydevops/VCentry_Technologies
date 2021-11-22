@@ -63,6 +63,7 @@ export default function SignUp() {
                     else {
                         API.postApi('/resume/user/send-verify', { email: signupDetail.email }).then(res => {
                             setverify(true)
+                            console.log(res);
                         }).catch(err => {
                             toast.error("Something went wrong please retry")
                             signupRef.current.disabled = false
@@ -99,6 +100,7 @@ export default function SignUp() {
                 password: signupDetail.password,
                 otp: otp
             }).then(response => {
+                console.log(response);
                 toast.success(response.data.successMessage, { position: toast.POSITION.TOP_CENTER });
                 setTimeout(() => {
                     window.location.href = '/resume/sign-in'                    
