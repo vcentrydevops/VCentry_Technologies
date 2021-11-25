@@ -381,6 +381,23 @@ input::-webkit-inner-spin-button {
     color: #ffff;
 }
 
+.message-box-form{
+    position: absolute;
+    background-color: #00751b;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+    border-radius: 5px;
+    top: 130px;
+    animation: message-box 1s;
+    transition-timing-function: cubic-bezier(0,0,1,1);
+}
+.message-box-form>p{
+    margin: 0px;
+    padding: 10px 10px;
+    font-weight: 600;
+    color: #ffff;
+}
 @media (max-width:970px) {
     .home-div2>div>div:nth-child(2){
         flex-basis: 100%;
@@ -415,5 +432,30 @@ input::-webkit-inner-spin-button {
 @media (max-width:520px) {
     .home-div-all-course>div{
         flex-basis: 100%;
+    }
+}
+
+@media (max-width:769px) {
+    .home-search-div>div>input{
+        width: 50%;
+    }
+}
+
+@media (max-width:426px) {
+    .message-box-form{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .home-search-div>div>input{
+        width: 75%;
+    }
+}
+
+@keyframes message-box {
+    0%{
+        top: -10px;
+    }
+    100%{
+        top:130px;
     }
 }

@@ -12,6 +12,7 @@ function Home(props) {
     const [permenSearch, setpermenSearch] = useState([])
     const [requestCourse, setrequestCourse] = useState({ type: "ClassRoom", name: "" })
     const history = useHistory()
+    const [messageShow, setmessageShow] = useState(false)
 
     useEffect(() => {
         courseDetails.sort((a,b)=>{
@@ -45,6 +46,16 @@ function Home(props) {
         setrequestCourse({ ...requestCourse, [event.target.name]: event.target.value })
     }
 
+    const submitRequestCourse=(e)=>{
+        e.preventDefault()
+        window.scrollTo({top:0,behavior:"smooth"})
+        setmessageShow(true)
+        setTimeout(() => {
+            window.location.reload()
+        }, 2000);
+        console.log(requestCourse);
+    }
+
     const reqOpt = permenSearch.map((data, index) => {
         return <option key={data.courseHeading + index} value={data.courseHeading}>{data.courseHeading}</option>
     })
@@ -64,6 +75,9 @@ function Home(props) {
 
     return (
         <div>
+            {messageShow&&<div className="message-box-form">
+                <p>Our team contact you soon</p>
+            </div>}
             <div className="home-search-div">
                 <h1>VCentry Technologies</h1>
                 <p>Hands on Training Institute</p>
@@ -109,21 +123,21 @@ function Home(props) {
                             </Card>
                         </Accordion>
                     </div>
-                    <div className="request-for-class">
+                    <form className="request-for-class" onSubmit={submitRequestCourse}>
                         <p>Request for Class Room & Online Training Quotation</p>
                         <div className={requestCourse.type === "ClassRoom" ? "set-classroom" : "set-online"}>
                             <p onClick={() => setrequestCourse({ ...requestCourse, type: "ClassRoom" })}>Class Room</p>
                             <p onClick={() => setrequestCourse({ ...requestCourse, type: "Online" })}>Online</p>
                         </div>
-                        <input name="name" onChange={(event) => setRequestDetail(event)} type="text" placeholder="Enter your Name"></input>
-                        <input name="email" onChange={(event) => setRequestDetail(event)} type="mail" placeholder="Enter your Email"></input>
-                        <input name="mobileNo" onChange={(event) => setRequestDetail(event)} type="number" placeholder="Enter your Mobile No."></input>
+                        <input name="name" onChange={(event) => setRequestDetail(event)} type="text" placeholder="Enter your Name" required></input>
+                        <input name="email" onChange={(event) => setRequestDetail(event)} type="email" placeholder="Enter your Email" required></input>
+                        <input name="mobileNo" onChange={(event) => setRequestDetail(event)} type="number" placeholder="Enter your Mobile No." required></input>
                         <select name="courseName" defaultValue="default" onChange={(event) => setRequestDetail(event)}>
                             <option value="default" disabled>Select Course</option>
                             {reqOpt}
                         </select >
-                        <input type="button" value="Get Quotes"></input>
-                    </div>
+                        <input type="submit" value="Get Quotes"></input>
+                    </form>
                 </div>
             </div>
             <div className="home-div3">

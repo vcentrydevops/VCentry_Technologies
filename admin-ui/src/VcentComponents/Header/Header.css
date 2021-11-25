@@ -217,7 +217,7 @@
 .hover-nav1>ul{
     background-color: #fff;
     border: 1px solid;
-    height: 81vh;
+    height: 73vh;
     list-style: none;
     padding: 0px;
     width: 245px;
@@ -246,7 +246,7 @@
     bottom: 30px;
     left: 244px;
     padding: 0px;
-    height: 81vh;
+    height: 73vh;
     overflow: auto;
     background-color: #292929e5;
 }

@@ -66,34 +66,34 @@ function Header() {
                                 </div>
                                 <div className={navbarVisible ?"hover-nav":"hover-nav-visi"} onClick={setVisible}>
                                     <div>
-                                        <NavLink to="/">Python</NavLink>
-                                        <NavLink to="/">Azure</NavLink>
-                                        <NavLink to="/">Selenium</NavLink>
-                                        <NavLink to="/">Fullstack Developer</NavLink>
-                                        <NavLink to="/">Robotic Process Automation</NavLink>
-                                        <NavLink to="/">Big Data Hadoop</NavLink>
-                                        <NavLink to="/">Sales Force Developer</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Python</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Azure</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Selenium</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Fullstack Developer</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Robotic Process Automation</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Big Data Hadoop</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Sales Force Developer</NavLink>
                                     </div>
                                     <div>
-                                        <NavLink to="/">AWS</NavLink>
-                                        <NavLink to="/">DevOps</NavLink>
-                                        <NavLink to="/">Digital Marketing</NavLink>
-                                        <NavLink to="/">Artificial Intelligence</NavLink>
-                                        <NavLink to="/">Java</NavLink>
-                                        <NavLink to="/">Big Data Analytics</NavLink>
-                                        <NavLink to="/">Power BI</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>AWS</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>DevOps</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Digital Marketing</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Artificial Intelligence</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Java</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Big Data Analytics</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Power BI</NavLink>
                                     </div>
                                     <div>
-                                        <NavLink to="/">Data Science</NavLink>
-                                        <NavLink to="/">Data Science with Python</NavLink>
-                                        <NavLink to="/">Machine Learning</NavLink>
-                                        <NavLink to="/">Angular JS</NavLink>
-                                        <NavLink to="/">Android</NavLink>
-                                        <NavLink to="/">Google cloud</NavLink>
-                                        <NavLink to="/">Tableau</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Data Science</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Data Science with Python</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Machine Learning</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Angular JS</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Android</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Google cloud</NavLink>
+                                        <NavLink to="/" onClick={()=>{setMenu(!menu)}}>Tableau</NavLink>
                                     </div>
                                     <div>
-                                        <NavLink to="">All Courses</NavLink>
+                                        <NavLink to="" onClick={()=>{setMenu(!menu)}}>All Courses</NavLink>
                                     </div>
                                 </div>
                             </li>
@@ -106,174 +106,174 @@ function Header() {
                                         <li>
                                             <NavLink to="/"><span>Master Program</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Big Data Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">Data Science Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">Cloud Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">DevOps Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">Software Testing Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">Business Intelligence Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">Full Stack Masters Programs</NavLink></li>
-                                                <li><NavLink to="/">Freshers Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Big Data Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Data Science Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Cloud Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>DevOps Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Software Testing Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Business Intelligence Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Full Stack Masters Programs</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Freshers Masters Programs</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Cloud Computing</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">AWS Training</NavLink></li>
-                                                <li><NavLink to="/">Workday Training</NavLink></li>
-                                                <li><NavLink to="/">Salesforce Admin Training</NavLink></li>
-                                                <li><NavLink to="/">Salesforce Developer Training</NavLink></li>
-                                                <li><NavLink to="/">VMware Training</NavLink></li>
-                                                <li><NavLink to="/">OpenStack Training</NavLink></li>
-                                                <li><NavLink to="/">OpenNebula Training</NavLink></li>
-                                                <li><NavLink to="/">Citrix Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>AWS Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Workday Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Salesforce Admin Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Salesforce Developer Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>VMware Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>OpenStack Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>OpenNebula Training</NavLink></li>
+                                                <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Citrix Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Software Testing</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/selenium_training">Selenium Training</NavLink></li>
-                                                <li><NavLink to="/manual_testing_training">Manual Testing Training</NavLink></li>
-                                                <li><NavLink to="/big_data_testing_training">Big Data Testing Training</NavLink></li>
-                                                <li><NavLink to="/">QTP Training</NavLink></li>
-                                                <li><NavLink to="/">LoadRunner Training</NavLink></li>
-                                                <li><NavLink to="/jmeter_training">JMeter Training</NavLink></li>
-                                                <li><NavLink to="/">ETL Testing Training</NavLink></li>
-                                                <li><NavLink to="/">Test Complete Training</NavLink></li>
-                                                <li><NavLink to="/">Soap UI Training</NavLink></li>
-                                                <li><NavLink to="/">Coded UI Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/selenium_training">Selenium Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/manual_testing_training">Manual Testing Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/big_data_testing_training">Big Data Testing Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">QTP Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">LoadRunner Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/jmeter_training">JMeter Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">ETL Testing Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Test Complete Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Soap UI Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Coded UI Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Digital Marketing</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">SEO Training</NavLink></li>
-                                                <li><NavLink to="/">Google Analytics Training</NavLink></li>
-                                                <li><NavLink to="/">Google Adwords-PPC Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">SEO Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Google Analytics Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Google Adwords-PPC Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Web Designing</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">HTML Training</NavLink></li>
-                                                <li><NavLink to="/">CSS Training</NavLink></li>
-                                                <li><NavLink to="/">PHP Training</NavLink></li>
-                                                <li><NavLink to="/">MySQL Training</NavLink></li>
-                                                <li><NavLink to="/">JavaScript Training</NavLink></li>
-                                                <li><NavLink to="/">Angular JS Training</NavLink></li>
-                                                <li><NavLink to="/">Angular 2 Training</NavLink></li>
-                                                <li><NavLink to="/">Angular 4 Training</NavLink></li>
-                                                <li><NavLink to="/">Angular 7 Training</NavLink></li>
-                                                <li><NavLink to="/">Node.js Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">HTML Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">CSS Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">PHP Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">MySQL Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">JavaScript Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Angular JS Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Angular 2 Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Angular 4 Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Angular 7 Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Node.js Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Mobile Application</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Android Training</NavLink></li>
-                                                <li><NavLink to="/">iOS Training</NavLink></li>
-                                                <li><NavLink to="/">Objective-C Training</NavLink></li>
-                                                <li><NavLink to="/">PhoneGap Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Android Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">iOS Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Objective-C Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">PhoneGap Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Java</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Core Java Training</NavLink></li>
-                                                <li><NavLink to="/">J2EE Training</NavLink></li>
-                                                <li><NavLink to="/">Struts Training</NavLink></li>
-                                                <li><NavLink to="/">Hibernate Training</NavLink></li>
-                                                <li><NavLink to="/">Spring Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Core Java Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">J2EE Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Struts Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Hibernate Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Spring Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Data Warehousing</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Informatica Training</NavLink></li>
-                                                <li><NavLink to="/">Hadoop Training</NavLink></li>
-                                                <li><NavLink to="/">Big Data Analytics Training</NavLink></li>
-                                                <li><NavLink to="/">R Programming Training</NavLink></li>
-                                                <li><NavLink to="/">Tableau Training</NavLink></li>
-                                                <li><NavLink to="/">Data Science Training</NavLink></li>
-                                                <li><NavLink to="/">Data Science with R Training</NavLink></li>
-                                                <li><NavLink to="/">Data Science with SAS Training</NavLink></li>
-                                                <li><NavLink to="/">Data Science with Python Training</NavLink></li>
-                                                <li><NavLink to="/">Ab Initio Training</NavLink></li>
-                                                <li><NavLink to="/">Datastage Training</NavLink></li>
-                                                <li><NavLink to="/">OBIEE Training</NavLink></li>
-                                                <li><NavLink to="/">Microstrategy Training</NavLink></li>
-                                                <li><NavLink to="/">Cognos Training</NavLink></li>
-                                                <li><NavLink to="/">Cognos TM1 Training</NavLink></li>
-                                                <li><NavLink to="/">Informatica Data Quality Training</NavLink></li>
-                                                <li><NavLink to="/">Informatica MDM Training</NavLink></li>
-                                                <li><NavLink to="/">Buisness Objects Training</NavLink></li>
-                                                <li><NavLink to="/">Qlikview Training</NavLink></li>
-                                                <li><NavLink to="/">Pentaho Training</NavLink></li>
-                                                <li><NavLink to="/">Machine Learning Training</NavLink></li>
-                                                <li><NavLink to="/">Apache Spark Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Informatica Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Hadoop Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Big Data Analytics Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">R Programming Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Tableau Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Data Science Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Data Science with R Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Data Science with SAS Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Data Science with Python Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Ab Initio Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Datastage Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">OBIEE Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Microstrategy Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Cognos Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Cognos TM1 Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Informatica Data Quality Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Informatica MDM Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Buisness Objects Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Qlikview Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Pentaho Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Machine Learning Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Apache Spark Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Database Developer</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Oracle Training</NavLink></li>
-                                                <li><NavLink to="/">Teradata Training</NavLink></li>
-                                                <li><NavLink to="/">Informix Training</NavLink></li>
-                                                <li><NavLink to="/">Sybase Training</NavLink></li>
-                                                <li><NavLink to="/">MongoDB Training</NavLink></li>
-                                                <li><NavLink to="/">Apache Cassandra Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Oracle Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Teradata Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Informix Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Sybase Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">MongoDB Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Apache Cassandra Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>DBA Training</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Oracle DBA Training</NavLink></li>
-                                                <li><NavLink to="/">Advanced Oracle DBA Training</NavLink></li>
-                                                <li><NavLink to="/">Oracle Apps DBA Training</NavLink></li>
-                                                <li><NavLink to="/">Oracle Performance Tuning Training</NavLink></li>
-                                                <li><NavLink to="/">SQL Server DBA Training</NavLink></li>
-                                                <li><NavLink to="/">DB2 DBA Training</NavLink></li>
-                                                <li><NavLink to="/">TeraData DBA Training</NavLink></li>
-                                                <li><NavLink to="/">MySQL DBA Training</NavLink></li>
-                                                <li><NavLink to="/">MongoDB Admin Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Oracle DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Advanced Oracle DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Oracle Apps DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Oracle Performance Tuning Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">SQL Server DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">DB2 DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">TeraData DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">MySQL DBA Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">MongoDB Admin Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Robotic Process Automation</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">Blue Prism Training</NavLink></li>
-                                                <li><NavLink to="/">Automation Anywhere Training</NavLink></li>
-                                                <li><NavLink to="/">UI Path Training</NavLink></li>
-                                                <li><NavLink to="/">OpenSpan Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Blue Prism Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Automation Anywhere Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">UI Path Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">OpenSpan Training</NavLink></li>
                                             </ul>
                                         </li>
                                         <li>
                                             <NavLink to="/"><span>Other Training</span><span><BiChevronRight></BiChevronRight></span></NavLink>
                                             <ul>
-                                                <li><NavLink to="/">PERL Training</NavLink></li>
-                                                <li><NavLink to="/">Python Training</NavLink></li>
-                                                <li><NavLink to="/">Ruby on Rails Training</NavLink></li>
-                                                <li><NavLink to="/">UNIX Training</NavLink></li>
-                                                <li><NavLink to="/">Solaris Training</NavLink></li>
-                                                <li><NavLink to="/">C & C++ Training</NavLink></li>
-                                                <li><NavLink to="/">AJAX Training</NavLink></li>
-                                                <li><NavLink to="/">CCNA/CCNP Training</NavLink></li>
-                                                <li><NavLink to="/">Chef Training</NavLink></li>
-                                                <li><NavLink to="/">Embedded System Training</NavLink></li>
-                                                <li><NavLink to="/">Windows PowerShell Training</NavLink></li>
-                                                <li><NavLink to="/">DevOps Training</NavLink></li>
-                                                <li><NavLink to="/">Ansible Training</NavLink></li>
-                                                <li><NavLink to="/">Jenkins Training</NavLink></li>
-                                                <li><NavLink to="/">MEAN Stack Training</NavLink></li>
-                                                <li><NavLink to="/">Tally Training</NavLink></li>
-                                                <li><NavLink to="/">CyberArk Training</NavLink></li>
-                                                <li><NavLink to="/">Puppet Training</NavLink></li>
-                                                <li><NavLink to="/">Docker Training</NavLink></li>
-                                                <li><NavLink to="/">Google go Training</NavLink></li>
-                                                <li><NavLink to="/">Xamarin Training</NavLink></li>
-                                                <li><NavLink to="/">Google Cloud Training</NavLink></li>
-                                                <li><NavLink to="/">BizTalk Training</NavLink></li>
-                                                <li><NavLink to="/">Cyber Security Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">PERL Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Python Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Ruby on Rails Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">UNIX Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Solaris Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">C & C++ Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">AJAX Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">CCNA/CCNP Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Chef Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Embedded System Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Windows PowerShell Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">DevOps Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Ansible Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Jenkins Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">MEAN Stack Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Tally Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">CyberArk Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Puppet Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Docker Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Google go Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Xamarin Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Google Cloud Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">BizTalk Training</NavLink></li>
+                                                <li><NavLink onClick={()=>{setMenu(!menu)}} to="/">Cyber Security Training</NavLink></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -285,23 +285,23 @@ function Header() {
                                 </div>
                                 <div className={navbarVisible ? "hover-nav1":"hover-nav-visi"} onClick={setVisible}>
                                     <ul>
-                                        <li><NavLink to="/"><span>Guindy</span></NavLink></li>
+                                        <li><NavLink to="/" onClick={()=>{setMenu(!menu)}}><span>Guindy</span></NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                             <li className="online-training">
                                 <div>
-                                    <p><NavLink to="/">Online Training</NavLink></p>
+                                    <p><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Online Training</NavLink></p>
                                 </div>
                             </li>
                             <li className="hire-talent">
                                 <div>
-                                    <p><NavLink to="/">Hire Talent</NavLink></p>
+                                    <p><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Hire Talent</NavLink></p>
                                 </div>
                             </li>
                             <li className="contact-us">
                                 <div>
-                                    <p><NavLink to="/">Contact Us</NavLink></p>
+                                    <p><NavLink to="/" onClick={()=>{setMenu(!menu)}}>Contact Us</NavLink></p>
                                 </div>
                             </li>
                             <li className="search-bar">
