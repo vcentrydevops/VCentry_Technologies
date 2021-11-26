@@ -13,6 +13,7 @@ import EditCourse from './Components/EditCourse/EditCourse';
 import MainHomePage from './VcentComponents/MainHomePage';
 import ResumeFirstPage from './ResumeComponents/ResumeFirstPage'
 import AdminHomePage from './Components/AdminHomePage';
+import EnquiryForm from './EnquiryForm/EnquiryForm';
 
 function App() {
   const [id, setid] = useState("sign-in")
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
+          <Route path="/enquiry-form"><EnquiryForm></EnquiryForm></Route>
           <Route path="/resume"><ResumeFirstPage></ResumeFirstPage></Route>
           <Route path="/admin/sign-in"><SignIn></SignIn></Route>
           <Route path="/admin/sign-up"><SignUp></SignUp></Route>

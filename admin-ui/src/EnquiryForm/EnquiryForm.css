@@ -1,0 +1,204 @@
+.enquiry-form-cont{
+    background-image: linear-gradient(135deg,#93e6a5,#29c24a,#93e6a5);   
+    display: flex;
+    justify-content: center;
+}
+
+.enquiry-form-modal{
+    width: 60%;
+    background-color: #ffff;
+    /* height: 200px; */  
+    margin: 20px 0px 20px 0px;
+    box-shadow: 3px 3px 4px 2px;
+    overflow: hidden;
+}
+
+.enquiry-form-head{
+    background-image: url(../Images/contact-us-back.jpg);
+    text-align: center;
+    height: 100px;
+    background-size: 100% 200px;
+}
+
+.get-in-p{
+    font-weight:700;
+    font-size: 30px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+
+.vcent-enq-form{
+    padding: 20px 50px;
+}
+
+.enquiry-form-label{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.enquiry-form-l-div1{
+    flex-basis: 24%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.enquiry-form-l-div1>p{
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+.enquiry-form-l-div1>p>span{
+    color: red;
+}
+.enquiry-form-l-div2{
+    flex-basis: 72%;
+    display: grid;
+}
+
+.enquiry-form-l-div2>select,
+.enquiry-form-l-div2>textarea,
+.enquiry-form-l-div2>input{
+    border:none;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    padding-left: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.enquiry-form-l-div2>select:focus,
+.enquiry-form-l-div2>textarea:focus,
+.enquiry-form-l-div2>input:focus{
+    border-bottom: 2px solid #28a745;
+}
+
+.enquiry-form-l-div2>.react-tel-input>input{
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0px;
+}
+
+.enquiry-form-l-div2>.react-tel-input>input:focus{
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #28a745; 
+}
+
+.gender-div-enq{
+    display: flex;
+}
+
+.gender-div-enq>label{
+    display: flex;
+    flex-basis: 14%;
+    margin-right: 7%;
+}
+
+.gender-div-enq>label>input{
+    margin-top: 8px;
+    margin-right: 6px;
+}
+
+.addres-enq-div1{
+    align-items: flex-start;
+}
+
+.enq-submit-div{
+    display: flex;
+    justify-content: center;
+
+}
+.enq-submit-div>button{
+    border: none;
+    background-color: #29c24a;
+    color: #ffff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 3px 10px;
+}
+
+#phone-warning-div{
+    color: #ffa300;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.enq-multi-course>div{
+    flex-basis: 100%;
+    border-top: 0px;
+    border-bottom:1px solid ;
+    border: none !important;
+}
+.enq-multi-course>div:focus{
+    display: none;
+}
+
+@media (max-width:769px) {
+    .enquiry-form-modal{
+        width: 74%;
+    }
+
+    .vcent-enq-form{
+        padding: 20px 30px;
+    }
+
+    .enquiry-form-l-div1{
+        flex-basis: 28%;
+    }
+
+    .enquiry-form-l-div2{
+        flex-basis: 66%;
+    }
+}
+
+@media (max-width:426px) {
+    .enquiry-form-modal{
+        width: 80%;
+    }
+
+    .vcent-enq-form{
+        padding: 20px 30px;
+    }
+
+    .enquiry-form-label{
+        flex-wrap: wrap;
+    }
+
+    .enquiry-form-l-div1{
+        flex-basis: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .enquiry-form-l-div2>.react-tel-input,
+    .enquiry-form-l-div2{
+        display: flex;
+        flex-basis: 100%;
+        justify-content: flex-start;
+    }
+
+    .enquiry-form-l-div2>.react-tel-input>input,
+    .enquiry-form-l-div2>input{
+        flex-basis: 100% !important;
+    }
+}
+
+@media (max-width:376px) {
+    .enquiry-form-modal{
+        width: 90%;
+    }
+
+    .vcent-enq-form{
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width:376px) {
+
+    .vcent-enq-form{
+        padding: 20px 10px;
+    }
+}

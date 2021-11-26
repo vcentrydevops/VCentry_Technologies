@@ -17,6 +17,7 @@ app.use('/admin', Admin)
 app.use('/course', Course)
 app.use('/resume', UserInfoRoute)
 app.use('/resume', UserProfileRoute)
+app.use('/enquiry',require('./Router/EnquiryRoute'))
 
 mongoose.connect(MONGO_URL, { useFindAndModify: false, useUnifiedTopology: true, useNewUrlParser: true }).then(() => { console.log("Db connected") }).catch((err) => { console.log("db not connected", err); })
 mongoose.Promise = global.Promise
