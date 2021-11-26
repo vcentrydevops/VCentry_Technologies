@@ -1,4 +1,4 @@
-import React, { Fragment, useMemo, useRef, useState } from 'react'
+import React, { createRef, Fragment, useMemo, useRef, useState } from 'react'
 import './EnquiryForm.css'
 import Select from 'react-select';
 import Header from '../Components/Header/Header'
@@ -6,11 +6,11 @@ import PhoneInput from 'react-phone-input-2'
 import API from '../API/Service'
 import { Overlay, Popover } from 'react-bootstrap'
 import { AiFillWarning } from 'react-icons/ai'
-import { ToastContainer,toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 
 export default function EnquiryForm() {
     const batchTime = ["07:00 AM - 09:00 AM", "08:00 AM - 10:00 AM", "09:00 AM - 11:00 AM", "10:00 AM - 12:00 PM"]
-    const coursesList = [{value:"selenium",label: "Selenium" }, { value:"MERN Stack",label: "MERN Stack" }, { value:"python",label: "Python" }]
+    const coursesList = [{ value: "selenium", label: "Selenium" }, { value: "MERN Stack", label: "MERN Stack" }, { value: "python", label: "Python" }]
     const [enqData, setenqData] = useState({
         userName: "",
         mobileNo: "",
@@ -44,14 +44,15 @@ export default function EnquiryForm() {
     }
 
     const getFormData = (e) => {
+        submitBtnRef.current.disabled = false
         if (show === true) {
             setShow(false)
         }
         setenqData({ ...enqData, [e.target.name]: e.target.value })
     }
 
-    const getCourseData=(e)=>{
-        setenqData({...enqData,courses:e})
+    const getCourseData = (e) => {
+        setenqData({ ...enqData, courses: e })
     }
 
     const batchTimeMap = useMemo(() => {
@@ -61,30 +62,34 @@ export default function EnquiryForm() {
     }, [batchTime])
 
     const submitEnqData = (e) => {
+        submitBtnRef.current.disabled = true
         e.preventDefault()
         if (!enqData.mobileNo || enqData.mobileNo.length != 12) {
             document.getElementById('phone-id').scrollIntoView()
+            submitBtnRef.current.disabled = false
             setShow(true)
         } else {
-            API.postApi('/enquiry',enqData).then(res=>{
+            API.postApi('/enquiry', enqData).then(res => {
                 console.log(res);
                 toast.success(res.data.successMessage)
                 setTimeout(() => {
                     window.location.reload()
                 }, 3000);
-            }).catch(err=>{
-                console.log(err.response);
+            }).catch(err => {
+                console.log(err.response); 
+                toast.error(err.response.data.errorMessage)
+                submitBtnRef.current.disabled = false
             })
-            console.log(enqData);
         }
     }
+    const submitBtnRef = createRef()
 
     const [show, setShow] = useState(false);
     const ref = useRef(null);
 
     return (
         <Fragment>
-            <ToastContainer/>
+            <ToastContainer />
             <Header></Header>
             <div className="enquiry-form-cont">
                 <div className="enquiry-form-modal">
@@ -236,7 +241,7 @@ export default function EnquiryForm() {
                             </div>
                         </div>
                         <div className="enq-submit-div">
-                            <button type="submit">Submit</button>
+                            <button type="submit" ref={submitBtnRef}>Submit</button>
                         </div>
                     </form>
                 </div>

@@ -31,16 +31,13 @@ const EnquirySchema = new Schema({
         required:true
     },
     company:{
-        type:String,
-        required:true
+        type:String
     },
     domain:{
-        type:String,
-        required:true
+        type:String
     },
     address:{
-        type:String,
-        required:true
+        type:String
     },
     course:{
         type:[{
@@ -50,16 +47,13 @@ const EnquirySchema = new Schema({
             value:{
                 type:String
             }
-        }],
-        required:true
+        }]
     },
     joinDate:{
-        type:String,
-        required:true
+        type:String
     },
     timing:{
-        type:String,
-        required:true
+        type:String
     }
 })
 

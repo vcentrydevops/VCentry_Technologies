@@ -120,6 +120,10 @@
     padding: 3px 10px;
 }
 
+.enq-submit-div>button:disabled{
+    opacity: 0.6;
+}
+
 #phone-warning-div{
     color: #ffa300;
     font-size: 20px;

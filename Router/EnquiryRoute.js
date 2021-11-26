@@ -6,7 +6,7 @@ router.post('/', (request, response) => {
     Enquiry.create(request.body).then(res => {
         response.status(200).json({ successMessage: "Our team will contact you soon" })
     }).catch(err => {
-        response.status(422).json({ errorMessage: "Please try again",MediaError })
+        response.status(422).json({ errorMessage: "Please try again",err })
     })
 })
 
