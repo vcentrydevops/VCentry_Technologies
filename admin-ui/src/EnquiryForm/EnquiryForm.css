@@ -156,13 +156,18 @@
 
 @media (max-width:426px) {
     .enquiry-form-modal{
-        width: 80%;
+        width: 90%;
     }
 
     .vcent-enq-form{
-        padding: 20px 30px;
+        padding: 20px 20px;
     }
 
+    .enquiry-form-l-div2>select,
+    .enquiry-form-l-div2>textarea,
+    .enquiry-form-l-div2>input{
+        padding-left: 0px;
+    }
     .enquiry-form-label{
         flex-wrap: wrap;
     }
@@ -192,7 +197,7 @@
     }
 
     .vcent-enq-form{
-        padding: 20px 30px;
+        padding: 20px 20px;
     }
 }
 
