@@ -197,7 +197,7 @@ select:disabled{
 
 #admin-course-faq-show{
     flex-basis: 95%;
-    /* margin-left: 2.5%; */
+    margin-left: 2.5%;
     box-shadow: 1px 1px 3px 2px;
     padding: 10px;
     margin-top: 10px;
