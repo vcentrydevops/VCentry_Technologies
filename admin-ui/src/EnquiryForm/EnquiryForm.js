@@ -74,7 +74,7 @@ export default function EnquiryForm() {
                 toast.success(res.data.successMessage)
                 setTimeout(() => {
                     window.location.reload()
-                }, 3000);
+                }, 3000);  
             }).catch(err => {
                 console.log(err.response); 
                 toast.error(err.response.data.errorMessage)

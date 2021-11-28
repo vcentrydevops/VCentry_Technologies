@@ -34,6 +34,7 @@ function MainContent(props) {
     const batchTime = createRef()
     const batchSession = createRef()
     const [courseFaq, setcourseFaq] = useState({ heading: "", content: "" })
+    const [editCourseFaq, seteditCourseFaq] = useState({ heading: "", content: "" })
     const [editFaq, seteditFaq] = useState("")
     const faqHeadRef = createRef()
 
@@ -112,9 +113,18 @@ function MainContent(props) {
         setcourseFaq({ ...courseFaq, [event.target.name]: event.target.value })
     }
 
+    const setEditCourseFaqHead = (event) => {
+        seteditCourseFaq({ ...editCourseFaq, [event.target.name]: event.target.value })
+    }
+
     const setCourseFaqContent = (event, editor) => {
         const data = editor.getData()
         setcourseFaq({ ...courseFaq, content: data })
+    }
+
+    const setEditCourseFaqContent = (event, editor) => {
+        const data = editor.getData()
+        seteditCourseFaq({ ...editCourseFaq, content: data })
     }
 
     const addFaq = () => {
@@ -126,10 +136,10 @@ function MainContent(props) {
     }
 
     const updateFaq = (index1) => {
-        if (courseFaq.heading && courseFaq.content) {
+        if (editCourseFaq.heading && editCourseFaq.content) {
             courseDetail.courseFaq.splice(index1, 1)
-            courseDetail.courseFaq.splice(index1, 0, courseFaq)
-            setcourseFaq({ heading: "", content: "" })
+            courseDetail.courseFaq.splice(index1, 0, editCourseFaq)
+            seteditCourseFaq({ heading: "", content: "" })
             seteditFaq("")
         }
     }
@@ -169,20 +179,20 @@ function MainContent(props) {
     const showFaq = courseDetail.courseFaq.map((data, index) => {
         return <div key={index + data.heading} id="admin-course-faq-show" className="admin-course-sat">
             <div>
-                <input type="text" name="heading" placeholder="Enter question" defaultValue={data.heading} onChange={(event) => setCourseFaqHead(event)} disabled={index === editFaq ? false : true}></input>
+                <input type="text" name="heading" placeholder="Enter question" defaultValue={data.heading} onChange={(event) => setEditCourseFaqHead(event)} disabled={index === editFaq ? false : true}></input>
             </div>
             <div>
                 <div className="admin-ck-editor-height">
                     <CKEditor
                         data={data.content}
                         editor={ClassicEditor}
-                        onChange={(event, editor) => setCourseFaqContent(event, editor)}
+                        onChange={(event, editor) => setEditCourseFaqContent(event, editor)}
                         disabled={index === editFaq ? false : true}
                     ></CKEditor>
                 </div>
             </div>
             <div className="admin-show-faq-div">
-                <i onClick={() => { seteditFaq(index); setcourseFaq({ heading: "", content: "" }) }}><FaEdit></FaEdit></i>
+                <i onClick={() => { seteditFaq(index); seteditCourseFaq({ heading: courseDetail.courseFaq[index].heading, content: courseDetail.courseFaq[index].content }) }}><FaEdit></FaEdit></i>
                 <i onClick={() => updateFaq(index)}><FaSave></FaSave></i>
                 <i onClick={() => { courseDetail.courseFaq.splice(index, 1); setcourseDetail({ ...courseDetail }) }}><FaTrash></FaTrash></i>
             </div>
