@@ -439,6 +439,11 @@ input::-webkit-inner-spin-button {
     .home-search-div>div>input{
         width: 50%;
     }
+
+    .home-search-div>div>div{
+        width: 50%;
+        margin-left: 25%;
+    }
 }
 
 @media (max-width:426px) {
@@ -448,6 +453,11 @@ input::-webkit-inner-spin-button {
     }
     .home-search-div>div>input{
         width: 75%;
+    }
+
+    .home-search-div>div>div{
+        width: 75%;
+        margin-left: 12.5%;
     }
 }
 
