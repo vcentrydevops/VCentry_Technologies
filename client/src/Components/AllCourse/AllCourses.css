@@ -1,0 +1,10 @@
+.admin-all-course-table-div>table{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.admin-all-courses-pagina{
+    display: flex;
+    justify-content: center;
+}

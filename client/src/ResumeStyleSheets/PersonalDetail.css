@@ -1,0 +1,117 @@
+.user-form{
+    margin: 20px 0px 20px 0px;
+    box-shadow: 1px 1px 3px;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    width: 99%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.user-detail-div:first-child{
+    margin-top: 10px;
+}
+.user-detail-div{
+    margin-bottom: 35px;
+}
+.user-detail-div>label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-label-name{
+    display: flex;
+    flex-basis: 25%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--input-label-size);
+    font-weight: 600;
+}
+
+.user-label-name>p{
+    margin-bottom: 0px;
+}
+
+.personal-div-input{
+    flex-basis: 70%;
+}
+
+.user-input,.react-tel-input>input{
+    width: 100%;
+    font-size: var(--input-size);
+    padding: 3px 0px 3px 7px;
+    border:1px solid var(--input-box-shade);
+    border-radius: 5px;
+}
+
+.user-input:focus,
+.react-tel-input>input:focus{
+    outline: none;
+    box-shadow: 0px 0px 3px 1px var(--input-border);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.warning-div{
+    margin-left: 30%;
+    border-radius: 5px;
+    background-color: #e9ed98;
+    padding: 3px;
+    position: relative;
+    bottom: 30px;
+}
+
+.warning-div>p{
+    margin-bottom: 0px;
+    overflow: visible;
+}
+.react-tel-input>div:first-child{
+    display: none;
+}
+
+@media (max-width:426px) {
+
+    .warning-div{
+        width: 100%;
+        margin-left: 0%;
+        bottom: 0px;
+    }
+    
+    .span-display{
+        display: none;
+    }
+    .user-detail-div{
+        margin-bottom: 20px;
+    }
+
+    .user-detail-div>label{
+        display: grid;
+        justify-content:unset;
+    } 
+    .user-label-name{
+        width: 100%;
+        margin-bottom: 10px;
+    }  
+    .personal-div-input{
+        width: 100% !important;
+    }
+}
+@media (max-width:376px) {
+    .user-label-name{
+        margin-bottom: 10px;
+    }  
+
+}
+
+@media (max-width:321px) {
+
+}

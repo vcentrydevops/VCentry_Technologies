@@ -1,0 +1,16 @@
+.admin-footer-sec-div{
+    background-color: #292929;
+    color:#888888;
+}
+.admin-footer-sec-div>p{
+    margin-bottom: 0px;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+}
+.admin-footer-sec-div>p>a{
+    color: #888888;
+    text-decoration: none;
+}
+.admin-footer-sec-div>p>a:hover{
+    color: #2389f2;
+}

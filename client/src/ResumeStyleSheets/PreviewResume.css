@@ -1,0 +1,98 @@
+.preview-form{
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 1px 1px 3px ;
+    margin-top: 20px;
+}
+
+.preview-form-content{
+    margin-top: 15px;
+}
+.preview-form-content>div{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.prev-cont-div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.prev-cont-div:first-child{
+    padding-top: 15px;
+}
+.prev-cont-div:last-child{
+    padding-bottom: 15px;
+}
+.prev-label-name>p,
+.prev-div-input>p{
+    margin-bottom: 0px;
+}
+.prev-label-name>p{
+    font-weight: 700;
+    font-size: 17px;
+}
+.prev-div-input>p{
+    font-size: 17px;
+}
+.prev-label-name{
+    flex-basis:30% ;
+    display: flex;
+    justify-content: space-between;
+}
+.prev-div-input{
+    flex-basis: 65%;
+}
+
+.edit-prev-btn:disabled{
+    color: var(--white) !important;
+    opacity: 0.7;
+    background-color: var(--rout-link-color) !important;
+}
+
+.animation-div{
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+}
+
+.animation-content{
+    animation-name: colorful;
+    animation-timing-function: linear;
+    height: 100%;
+    width: 50%;
+    display: block;
+    background-color: rgb(61, 114, 199);
+    animation-duration: 1.1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorful {
+    0%{
+        margin-left: -50%;
+    }
+    100%{
+        margin-left: 101%;
+    }
+}
+@media (max-width:426px) {
+    .preview-form{
+        width: 98%;
+        margin-left: 1%;
+    }
+    .prev-label-name{
+        flex-basis: 35%;
+    }    
+    .prev-div-input{
+        flex-basis: 60%;
+    }
+}
+@media (max-width:376px) {
+    .prev-label-name{
+        flex-basis: 45%;
+    }    
+    .prev-div-input{
+        flex-basis: 50%;
+    }
+}
